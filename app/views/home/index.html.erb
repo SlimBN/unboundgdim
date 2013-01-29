@@ -1,0 +1,16 @@
+<div id="searchbox">
+	<div class="innerbox">
+		<input class="search-field" type="text" name="search" placeholder="Search..." id="search">
+		<input class="submit" id="submit" type="submit" value="Go Fetch The World">
+	</div>
+</div>
+<script>
+  // Or, to start a slideshow, just pass in an array of images
+  $.backstretch([
+    "<%= asset_path('home_backgrounds/1.jpg') %>",
+    "<%= asset_path('home_backgrounds/2.jpg') %>",
+    "<%= asset_path('home_backgrounds/3.jpg') %>",
+    "<%= asset_path('home_backgrounds/4.jpg') %>"   
+  ], { fade: "slow", duration: 4000});
+
+</script>

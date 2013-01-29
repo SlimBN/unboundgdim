@@ -1,0 +1,187 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@font-face {
+	font-family: atwriter;
+	src: url('atwriter.ttf');
+}
+
+/*************************
+* NAVBAR
+*************************/
+
+#navbar {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background: #F78600;*/
+    -moz-box-shadow: 0 1px 6px #333333, 0 1px 1px black;
+    -webkit-box-shadow: 0 1px 6px #333333, 0 1px 1px black;
+    box-shadow: 0 1px 6px #333333, 0 1px 1px black;
+    display: block;
+    height: 40px;
+    padding-top: 0px;
+    
+    .logo {
+    	font-family: "atwriter";
+	    font-size: 25px;
+	    text-align: center;
+	    text-shadow: 0 1px 1px #486a08;
+        line-height: 40px;
+        color: white;
+
+        margin-top: 0px;
+        padding-top: 0px;
+        margin-left: 40px;
+        padding-right: 10px;
+
+        opacity: 0.5;
+
+        width: 140px;
+
+        background: #96bf48;
+
+        float: left;
+
+        a {
+            text-decoration: none;
+            margin-top: 0px;
+            padding-top: 0px;
+        	color: white;
+        }        
+
+        a:hover {
+            text-decoration: none;
+            background-color: transparent;
+            color: white;
+        }
+
+        img {
+            height: 40px;
+            width: 40px;
+        }
+
+    }
+
+    .logo:hover {
+    	opacity: 1;
+    }
+
+    .menu {
+        display: inline-block;
+        height: 40px;
+        float: right;
+        margin-top: 9px;
+        margin-right: 80px;
+        vertical-align: top;
+
+        div {
+            display: inline;
+            height: 40px;
+            list-style-image: none;
+
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+            margin-left: 15px;
+
+            padding-top: 10px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            background-color: black;
+            opacity: 0.5;
+        }
+
+        div:hover {
+            opacity: 1;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+    }
+}
+
+#container {
+	margin-top: 40px;
+	width: 100%;
+
+	padding: 0px;
+
+	#searchbox {
+		margin: auto;
+		margin-top: 250px;
+		width: 415px;
+	    padding: 15px;
+	    background: #fff;
+	    border-radius: 1px;
+	    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,0.4),0px 0px 0px rgba(0,0,0,0);
+	    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,0.4),0px 0px 0px rgba(0,0,0,0);
+	    box-shadow: 0px 0px 10px rgba(0,0,0,0.4),0px 0px 0px rgba(0,0,0,0);
+
+	    .innerbox {
+	        vertical-align: baseline;
+
+	        input {
+	            -webkit-appearance: textfield;
+	            padding: 1px;
+	            background-color: white;
+	            border: 2px inset;
+	            border-image: initial;
+	            -webkit-rtl-ordering: logical;
+	            -webkit-user-select: text;
+	            cursor: auto;
+	        }
+
+	        .search-field {
+	            font-family: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+	            margin: 0;
+	            font-size: 15px;
+	            padding: 15px 15px 13px;
+	            border: 1px solid #ccc;
+	            position: relative;
+	            z-index: 20;
+	            border-radius: 1px;
+	            -o-transition: all 0.2s ease-in-out 0s;
+	            -webkit-transition: all 0.2s ease-in-out 0s;
+	            -moz-transition: all 0.2s ease-in-out 0s;
+	        }
+
+	        .submit {
+	            background: #96bf48;
+	            color: #fff;
+	            font-family: "ProximaNovaRegular","Helvetica Neue",Helvetica,Arial,sans-serif;
+	            font-size: 16px;
+	            text-shadow: 0 1px 1px #486a08;
+	            border-radius: 1px;
+	            padding: 14px 30px;
+	            border: 1px solid #96bf48;
+	            cursor: pointer;
+	            -webkit-appearance: none;
+	        }
+	    }
+	}
+}
+
+
+
+
+
