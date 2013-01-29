@@ -1,3 +1,45 @@
-// Place all the styles related to the articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#page-wrapper {
+
+	width: 1100px;
+	padding: 0px;
+	margin: auto;
+
+	#main-left-section {
+		float: left;
+
+		padding-left: 20px;
+		width: 820px;
+
+
+		#article-item {
+			border: 1px solid #eee;
+			border-radius: 5px;
+
+			padding: 15px;
+		}
+
+	}
+
+	#tiny-right-section {
+		float: right;
+
+		width: 250px;
+
+
+		#new-article-box {
+			text-align: center;
+
+			.new-article {
+				width: 200px;
+
+				font-weight: bold;
+				font-size: 120%;
+
+				height: 40px;
+				vertical-align: middle;
+			}
+		}
+
+	}
+
+}

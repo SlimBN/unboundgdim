@@ -31,5 +31,23 @@
 </table>
 
 <br />
+<div id="page-wrapper">
+    <div id="main-left-section">
+        <% @articles.each do |article| %>
+        <div id="article-item">
+            <%= article.content %>
+        </div>
+        <% end %>
+    </div>
+
+    <div id="tiny-right-section">
+        <div id="new-article-box">
+            <a href="articles/new">
+                <div class="button red new-article">New Article</div>
+            </a>
+        </div>
+    </div>
+
+</div>
 
 <%= link_to 'New Article', new_article_path %>
