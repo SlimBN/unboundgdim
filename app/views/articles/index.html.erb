@@ -35,7 +35,14 @@
     <div id="main-left-section">
         <% @articles.each do |article| %>
         <div id="article-item">
-            <%= article.content %>
+            <div class="article">
+                <div class="item-header">
+                    <%= article.user.username %>
+                </div>
+                <div class="item">
+                    <%= article.content %>
+                </div>
+            </div>
         </div>
         <% end %>
     </div>
