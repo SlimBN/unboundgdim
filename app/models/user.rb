@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
 	has_many :articles
+	has_attached_file :avatar
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -9,6 +10,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :avatar
   # attr_accessible :title, :body
 end

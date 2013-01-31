@@ -37,7 +37,12 @@
         <div id="article-item">
             <div class="article">
                 <div class="item-header">
-                    <%= article.user.username %>
+                    <%= article.created_at %>
+                    
+                    <img alt="<%= article.user.username %>" title="<%= article.user.username %>" src="<%= article.user.avatar.url %>" height="75px" width="75px" />
+                    <div class="edit">
+                        <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </div>
                 </div>
                 <div class="item">
                     <%= article.content %>
@@ -49,9 +54,6 @@
 
     <div id="tiny-right-section">
         <div id="new-article-box">
-            <a href="articles/new">
-                <div class="button red new-article">New Article</div>
-            </a>
         </div>
     </div>
 
