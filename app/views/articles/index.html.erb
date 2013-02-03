@@ -1,36 +1,24 @@
-<h1>Listing articles</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Created at</th>
-    <th>Updated at</th>
-    <th>Page</th>
-    <th>User</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= article.content %></td>
-    <td><%= article.created_at %></td>
-    <td><%= article.updated_at %></td>
-    <td><%= article.page_id %></td>
-    <td><%= article.user_id %></td>
-    <td><%= article.category_id %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<section id='buzznews'>
+    <div id="content">
+    <div class="the-title">
+      <%= article.title %>
+      <div class="edit">
+        <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+    <div class="notepad">
 
-<br />
+        <%= article.content %>
+
+    </div>
+  </div>
+
+    <div id="the-author">
+      <img src="<%= article.user.avatar.url %>">
+    </div>
+  </section
+<% end %>  
 <div id="page-wrapper">
     <div id="main-left-section">
         <% @articles.each do |article| %>
