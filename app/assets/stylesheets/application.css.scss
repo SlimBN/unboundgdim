@@ -331,8 +331,9 @@
 
 				img {
 					  width: 98px;
-					  height: auto;
-					  display: block;
+					  //set back to auto after user
+					  height: 98px;
+					  display: inline;
 
 					  border-radius: 2px;
 
@@ -384,7 +385,7 @@
 				width: 750px;
 				vertical-align: top;
 
-				padding-top: 200px;
+				padding-top: 0px;
 
 				.the-title, .the-title:before, .the-title:after {
 				  background-color: white;
@@ -416,6 +417,10 @@
 
 				  color: #666;
 
+				  a {
+				  	text-decoration: none;
+				  }
+
 				  .edit {
 				  	display: inline-block;
 				  	float: right;
@@ -444,9 +449,24 @@
 
 				.content {
 					width: 700px;
+					min-height: 80px;
+					margin-top: -50px;
+					padding-left: 130px;
+
+					font: 15px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+						
 					display: block;
-					background-color: black;
 				}
+			}
+
+			#article-toolbar {
+				margin-bottom: 5px;
+				padding-top: 5px;
+				margin-left: 120px;
+
+				border-top: 1px solid #e5e5e5;
+
+				
 			}
 
 			border-bottom: 1px solid #e5e5e5;
@@ -490,7 +510,7 @@
 			padding: 0px auto;
 			margin-left: 10px;
 			margin-top: 20px;
-			border-bottom: 1px solid #e5e5e5;
+			
 
 			.header {
 				color: #999;
@@ -538,6 +558,9 @@
 						text-decoration: none;
 					}
 				}
+
+				border-bottom: 1px solid #e5e5e5;
+				margin-bottom: 4px;
 				
 			}
 		}

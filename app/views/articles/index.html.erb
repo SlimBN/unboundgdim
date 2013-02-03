@@ -3,34 +3,39 @@
         <h1>
             Welcome To Unbound
         </h1>
-        Next SoundCloud is now the new SoundCloud, for everyone. 
-Take advantage of the great new features. Search & Explore to find original music & audio you'll love.
-
-Play a sound and enjoy Continuous Play while you explore the rest of SoundCloud.
+        You can get the latest news all over the world, only here!
+        Join us at unbound. 
 
     </div>
 
 <% @articles.each do |article| %>
     <div id="article">
         <div id="the-author">
-          <img src="<%= article.user.avatar.url %>">
+          <img src="<%#article.user.avatar.url %>">
         </div>
         <div id="onearticle">
-        <div class="the-title">
-          <%= article.title %>
-          <div class="edit">
+            <div class="the-title">
+              <%= link_to article.title, article %>
+              <div class="edit">
 
-            <a href="" class="button">Add To Journal</a>
-            <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
+                <a href="" class="button">Add To Journal</a>
+                <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
 
-          </div>
+              </div>
+            </div>
+            <div class="content">
+
+                <%= truncate(article.content , :length => 256) %>
+
+            </div>
         </div>
-        <div class="content">
-
-            <%= truncate(article.content , :length => 140) %>
-
+        <div id="article-toolbar">
+            <a href="" class="button">Like</a>
+            <a href="" class="button">Hate</a>
+            <a href="" class="button">Confirm</a>
+            <a href="" class="button">Deny</a>
+            <a href="" class="button">Repost</a>
         </div>
-    </div>
     </div>
 
 <% end %>  
@@ -50,14 +55,16 @@ Play a sound and enjoy Continuous Play while you explore the rest of SoundCloud.
             </div>
         </div>
 
+        <% Journal.limit(5).each do |journal| %>
         <div class="released-journal">
             <div class="journal-logo">
                 <img src="notfound.jpg">
             </div>
             <div class="journal-info">
-                Happy nation
+                <%= journal.title %>
             </div>
         </div>
+        <% end %>
     </article>
 </div>
 
