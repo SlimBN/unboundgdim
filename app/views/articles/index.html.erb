@@ -1,50 +1,48 @@
+<div id="left-store">
+    <div class="warning">
+        Next SoundCloud is now the new SoundCloud, for everyone. 
+Take advantage of the great new features. Search & Explore to find original music & audio you'll love.
+
+Play a sound and enjoy Continuous Play while you explore the rest of SoundCloud.
+
+Use Related Sounds to easily discover more sounds you'll want to hear.
+
+And repost sounds and sets to share them from your stream.
+    </div>
+
 <% @articles.each do |article| %>
-<section id='buzznews'>
-    <div id="content">
-    <div class="the-title">
-      <%= article.title %>
-      <div class="edit">
-        <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-    </div>
-    <div class="notepad">
+    <div id="article">
+        <div id="the-author">
+          <img src="<%= article.user.avatar.url %>">
+        </div>
+        <div id="onearticle">
+        <div class="the-title">
+          <%= article.title %>
+          <div class="edit">
 
-        <%= article.content %>
+            <a href="" class="button">Add To Journal</a>
+            <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
 
-    </div>
-  </div>
+          </div>
+        </div>
+        <div class="content">
 
-    <div id="the-author">
-      <img src="<%= article.user.avatar.url %>">
+            <%= truncate(article.content , :length => 140) %>
+
+        </div>
     </div>
-  </section
+    </div>
+
 <% end %>  
-<div id="page-wrapper">
-    <div id="main-left-section">
-        <% @articles.each do |article| %>
-        <div id="article-item">
-            <div class="article">
-                <div class="item-header">
-                    <%= article.created_at %>
-                    
-                    <img alt="<%= article.user.username %>" title="<%= article.user.username %>" src="<%= article.user.avatar.url %>" height="75px" width="75px" />
-                    <div class="edit">
-                        <%= link_to 'Destroy', article, :class => "negative button cross", method: :delete, data: { confirm: 'Are you sure?' } %>
-                    </div>
-                </div>
-                <div class="item">
-                    <%= article.content %>
-                </div>
-            </div>
-        </div>
-        <% end %>
-    </div>
-
-    <div id="tiny-right-section">
-        <div id="new-article-box">
-        </div>
-    </div>
-
 </div>
+<div id="right-store">
+    <div class="notice">
+        <h1>
+            People of the world
+        </h1>
+Spread the words, connect the nodes, by sharing them and following them on journals.
+</div>
+</div>
+
 
 <%= link_to 'New Article', new_article_path %>
